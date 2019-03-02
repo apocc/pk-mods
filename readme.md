@@ -7,3 +7,7 @@ Unity and game assemblies have to be referenced manually. See [Unity Mod Manager
 ### Toggle AI and Stealth
 
 The stealth and ai buttons can be toggled via key press. Use the Unit Mod Manager ingame dialog to select which key toggles which action.
+
+### Weapon Set Hotkeys
+
+Allows the user to specify individual keys to select each weapon set and a key to cycle through them.
