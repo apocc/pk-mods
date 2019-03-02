@@ -2,7 +2,7 @@
   "Id": "ToggleAIStealth",
   "DisplayName": "Toggle AI and Stealth",
   "Author": "apocc",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "ManagerVersion": "0.12.2",
   "AssemblyName": "ToggleAIStealth.dll",
   "EntryMethod": "ToggleAIStealth.Main.Load",
