@@ -1,0 +1,10 @@
+{
+  "Id": "WeaponSetHotkeys",
+  "DisplayName": "Weapon Set Hotkeys",
+  "Author": "apocc",
+  "Version": "1.0.1",
+  "ManagerVersion": "0.12.2",
+  "AssemblyName": "WeaponSetHotkeys.dll",
+  "EntryMethod": "WeaponSetHotkeys.Main.Load",
+  "HomePage": "https://www.nexusmods.com/pathfinderkingmaker/mods/75"
+}

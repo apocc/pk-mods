@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleAIStealth", "ToggleAIStealth\ToggleAIStealth.csproj", "{44A16955-F465-4303-9477-BAB102E2FAA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{78C1A3FA-F67D-44D9-A291-0AECA7967D78}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeaponSetHotkeys", "WeaponSetHotkeys\WeaponSetHotkeys.csproj", "{7489A2F9-C24F-4377-97A9-527857DDC274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44A16955-F465-4303-9477-BAB102E2FAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A16955-F465-4303-9477-BAB102E2FAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A16955-F465-4303-9477-BAB102E2FAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A16955-F465-4303-9477-BAB102E2FAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7489A2F9-C24F-4377-97A9-527857DDC274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7489A2F9-C24F-4377-97A9-527857DDC274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7489A2F9-C24F-4377-97A9-527857DDC274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7489A2F9-C24F-4377-97A9-527857DDC274}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8E7C80D-C64F-49C9-BD1D-7496D540D70B}
+	EndGlobalSection
+EndGlobal
