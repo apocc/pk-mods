@@ -11,6 +11,8 @@ namespace WeaponSetHotkeys
 
             GUILayout.BeginVertical();
 
+            GUILayout.Label("There is currently no key validation. Make sure other installed mods don't use the same key!");
+
             GUILayout.BeginHorizontal();
             GUILayout.Label("Key for weapon set 1:", GUILayout.ExpandWidth(false));
             GUI.SetNextControlName("__apocc__tw__set00");

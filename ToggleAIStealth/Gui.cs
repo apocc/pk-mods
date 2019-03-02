@@ -10,6 +10,8 @@ namespace ToggleAIStealth
             if (!enabled) return;
 
             GUILayout.BeginVertical();
+            GUILayout.Label("There is currently no key validation. Make sure other installed mods don't use the same key!");
+
             settings.IsSelectionExpandedStealth = GUILayout.Toggle(settings.IsSelectionExpandedStealth, "Show key selection - Stealth", GUILayout.ExpandWidth(false));
             if (settings.IsSelectionExpandedStealth)
                 settings.BtnIdxStealth = GUILayout.SelectionGrid(settings.BtnIdxStealth, settings.Values, 6);
