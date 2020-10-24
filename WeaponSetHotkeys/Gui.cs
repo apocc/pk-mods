@@ -105,6 +105,11 @@ namespace WeaponSetHotkeys
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
+            GUILayout.Label("For all selected chararacters:", GUILayout.ExpandWidth(false));
+            settings.EnableAllSelectedCharacters = GUILayout.Toggle(settings.EnableAllSelectedCharacters, "");
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
             GUILayout.Label("Enable verbose logging:", GUILayout.ExpandWidth(false));
             settings.EnableVerboseLogging = GUILayout.Toggle(settings.EnableVerboseLogging, "");
             GUILayout.EndHorizontal();

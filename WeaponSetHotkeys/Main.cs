@@ -1,11 +1,11 @@
-﻿using Harmony12;
+﻿
+using HarmonyLib;
 using Kingmaker;
 using Kingmaker.GameModes;
-using Kingmaker.UI;
 using System;
 using System.Reflection;
-using UnityEngine;
 using UnityModManagerNet;
+using UnityEngine;
 
 namespace WeaponSetHotkeys
 {
@@ -28,7 +28,7 @@ namespace WeaponSetHotkeys
             {
                 LoadSettings(modEntry);
 
-                var h = HarmonyInstance.Create(modEntry.Info.Id);
+                var h = new Harmony(modEntry.Info.Id);
                 h.PatchAll(Assembly.GetExecutingAssembly());
 
                 modEntry.OnGUI = (UnityModManager.ModEntry me) => Gui.OnGUI(enabled, me, Settings);
@@ -118,7 +118,17 @@ namespace WeaponSetHotkeys
 
             private static void TrySetIdx(int nIdx)
             {
-                Kingmaker.UI.Selection.SelectionManager sm = Game.Instance.UI.SelectionManager;
+                SelectionManagerBase sm = Game.Instance.UI.SelectionManager;
+
+                if (Settings.EnableAllSelectedCharacters)
+                {
+
+                    foreach (Kingmaker.EntitySystem.Entities.UnitEntityData unit in sm.SelectedUnits)
+                        unit.Body.CurrentHandEquipmentSetIndex = nIdx;
+
+                    return;
+                }
+
                 if (sm.SelectedUnits.Count != 1)
                     return;
 
@@ -127,12 +137,25 @@ namespace WeaponSetHotkeys
 
             private static void TryIncrement()
             {
-                Kingmaker.UI.Selection.SelectionManager sm = Game.Instance.UI.SelectionManager;
+                SelectionManagerBase sm = Game.Instance.UI.SelectionManager;
+
+                if (Settings.EnableAllSelectedCharacters)
+                {
+
+                    foreach (Kingmaker.EntitySystem.Entities.UnitEntityData unit in sm.SelectedUnits)
+                    {
+                        var nIdx = unit.Body.CurrentHandEquipmentSetIndex + 1;
+                        unit.Body.CurrentHandEquipmentSetIndex = nIdx % 4;
+                    }
+
+                    return;
+                }
+
                 if (sm.SelectedUnits.Count != 1)
                     return;
 
-                var nIdx = sm.SelectedUnits[0].Body.CurrentHandEquipmentSetIndex + 1;
-                sm.SelectedUnits[0].Body.CurrentHandEquipmentSetIndex = nIdx % 4;
+                var nIdxs = sm.SelectedUnits[0].Body.CurrentHandEquipmentSetIndex + 1;
+                sm.SelectedUnits[0].Body.CurrentHandEquipmentSetIndex = nIdxs % 4;
             }
         }
     }

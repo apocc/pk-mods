@@ -24,6 +24,9 @@ namespace WeaponSetHotkeys
         public string KeySet03 { get => _keySet03; set => SetProperty(ref _keySet03, value); }
         public string KeySetToggle { get => _keySetToggle; set => SetProperty(ref _keySetToggle, value); }
 
+        [XmlAttribute("all")]
+        public bool EnableAllSelectedCharacters { get; set; }
+
         [XmlAttribute("verbose")]
         public bool EnableVerboseLogging { get; set; }
 
